@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Click Into Wealth | Earn From Home (USA Only)</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 640px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #2e3d49;
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+      color: #34495e;
+    }
+    .cta-button {
+      margin-top: 25px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #d35400;
+    }
+    .highlight {
+      background-color: #ffeaa7;
+      padding: 12px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #d35400;
+    }
+    .trust-badges img {
+      height: 40px;
+      margin: 10px;
+    }
+    .reviews {
+      text-align: left;
+      font-size: 15px;
+      margin-top: 30px;
+      background: #f0f9ff;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .review {
+      margin-bottom: 12px;
+    }
+    @media (max-width: 640px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      .cta-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🚀 Click Into Wealth: Your Shortcut to Online Income!</h1>
+    <p><span id="geoMessage">Verifying your eligibility...</span></p>
+
+    <div class="highlight">
+      🔥 Limited Spots for USA Only – Act Now!
+    </div>
+
+    <p>Join our exclusive opportunity and start earning by doing simple online tasks – no skills required!</p>
+
+    <a class="cta-button" href="https://nx2bs.com/c?o=336&a=13231&s1=Sidratul" target="_blank">
+      👉 Claim Your Spot Now
+    </a>
+
+    <div class="trust-badges">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Norton_Security_Logo.png" alt="Norton Secured" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/McAfee_logo.png" alt="McAfee Secured" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Trustpilot-logo-2018.png" alt="Trustpilot" />
+    </div>
+
+    <div class="reviews">
+      <div class="review"><strong>Amanda J.</strong> – “Best online gig ever! Easy cash in my PayPal weekly.”</div>
+      <div class="review"><strong>Chris L.</strong> – “Started this during lunch break, now I do this full time.”</div>
+      <div class="review"><strong>Linda S.</strong> – “I didn’t think it was real until I got my first payment!”</div>
+    </div>
+
+    <p style="margin-top: 30px; font-size: 14px; color: gray;">
+      *Offer available only for residents of the United States. Please apply today before this closes.
+    </p>
+  </div>
+
+  <!-- GeoLocation Script -->
+  <script>
+    fetch("https://ipapi.co/json/")
+      .then(response => response.json())
+      .then(data => {
+        const country = data.country_name;
+        const city = data.city;
+        if (country === "United States") {
+          document.getElementById("geoMessage").innerText =
+            `👋 Hello from ${city}, USA – You are eligible for this exclusive opportunity!`;
+        } else {
+          document.getElementById("geoMessage").innerText =
+            "Sorry, this opportunity is only open to USA residents.";
+        }
+      })
+      .catch(() => {
+        document.getElementById("geoMessage").innerText =
+          "Location check failed. If you're in the USA, you're eligible.";
+      });
+  </script>
+
+</body>
+</html>
